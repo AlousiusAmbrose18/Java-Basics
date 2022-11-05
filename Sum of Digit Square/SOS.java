@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+class SOS
+
+{
+	public static void main(String [] args)
+
+	{	
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the Value : ");
+		
+		int n = sc.nextInt();
+		
+		int d,i;
+		int sq = 0;
+
+		while (n>0)
+		{
+			d = n % 10;
+
+			sq = sq +(d*d);
+
+			n = n / 10;
+
+
+		}
+			System.out.println("Sum of Square of Each Digits : "+sq);
+}
+
+
+}

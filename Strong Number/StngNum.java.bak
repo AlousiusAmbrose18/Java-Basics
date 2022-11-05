@@ -1,0 +1,71 @@
+/* Perfect Number:
+
+		" The Factorial and sum of Digits in Given Number will be Same a Given Number "
+
+		ex1:
+
+			input = 145;
+
+			1! + 4! + 5! = 1 + 24 + 120 = 145;
+
+			*/
+
+
+import java.util.Scanner;
+class StngNum 
+{
+	public static void main(String[] args) 
+	
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the Number : ");
+
+		int n = sc.nextInt();
+
+		int temp = n;
+		
+		int m, i;
+
+		int stng = 0;
+
+		int fact;
+
+		
+
+		while ( n != 0 )
+
+		{
+			m = n % 10;
+
+			for ( i=1, fact = 1  ; i<=m ; i++ )
+			
+			{
+			
+			fact = fact * i;
+
+
+			}
+
+			n = n / 10;
+
+			stng = stng + fact;
+
+			System.out.println("Sum of fact: "+stng);
+			System.out.println("");
+
+
+		}
+
+		if ( temp == stng )
+		
+		{
+			System.out.println(temp+" is a Strong number...");
+		}
+
+		else
+			System.out.println(temp+" is Not a Strong number !!!");
+
+
+	}
+}

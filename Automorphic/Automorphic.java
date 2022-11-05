@@ -1,0 +1,91 @@
+/*Automarpic Number Means, the square of number digit ends with the input number...
+
+	ex1:
+
+			input = 5 
+			Square of 5 is = 25;
+			its ends with (last digit) is 5;
+
+
+	ex2:
+
+			input = 25:
+			Square of 25 is = 625;
+			its ends with 25;
+
+
+	ex3:
+
+			input = 625;
+			Square = 390625;
+			ends with 625;
+
+*/
+
+
+
+
+
+
+import java.util.Scanner;
+
+//import java.lang.Math;
+class Automorphic 
+{
+	public static void main(String[] args) 
+	
+	{
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the Number : ");
+
+		int n = sc.nextInt();
+
+		int temp = n;
+		int n2 = n;
+
+		int sq = n*n;  //double sq = math.pow(n,2)
+
+		System.out.println("Square of "+n+" is : "+sq);
+		System.out.println("");
+		
+		int m;
+		int	d=0;
+			
+		int i ;
+		int j = 0;
+		int k=1;
+
+		while (n > 0)
+		{
+			n = n / 10;
+			j++;	
+		}
+
+		//System.out.println("input Digits : "+j);
+
+		for ( i = 0; i<j ; i++ )
+		{
+			m = sq % 10;                                         // d = sq % math.pow(10,j);
+
+			d = d + (m*k);											
+
+			k = k * 10;
+
+			sq = sq / 10;
+		}
+
+		System.out.println("Value of D is :"+d);
+		System.out.println("");
+		
+		if (n2==d)
+
+		{
+			System.out.println(n2+" is Automorphic Number...");
+		}
+
+		else
+			System.out.println(n2+" is Not Automorphic Number...");
+
+	}
+}

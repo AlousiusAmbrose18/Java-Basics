@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Rev 
+
+{
+
+	public static void main (String[] args)
+
+	{
+	
+	Scanner sc = new Scanner(System.in);
+	
+	System.out.print("Enter the Number to Reverse: " );
+
+	int revNum = sc.nextInt();
+	int re = 0;
+	int mod1 =0;
+
+	while( revNum != 0 )
+
+		{	
+
+			mod1 = revNum % 10;
+
+			re = (re * 10) +mod1;
+
+			revNum = revNum/10;
+
+		}
+			System.out.println("Revesred : "+re);
+	}
+
+}

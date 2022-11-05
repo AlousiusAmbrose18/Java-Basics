@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class SED 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter a Value : ");
+
+		int n = sc.nextInt();
+
+		int o = 0;
+		int e = 0;
+		int d ;
+
+		while( n != 0)
+		{
+			d = n % 10;
+			if (d%2== 0 )
+
+					e = e +d;
+
+			else
+
+				o = o +d;
+
+			n = n/10;
+
+
+		}
+			
+		System.out.println("Sum of ODD Numbers : "+o);
+		System.out.println("Sum of EVEN Numbers : "+e);
+
+	}
+}
